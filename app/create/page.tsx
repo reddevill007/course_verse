@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 
 import { getAuthSession } from "@/lib/auth";
 import { InfoIcon } from "lucide-react";
+import CreateCourseForm from "@/components/CreateCourseForm";
 
 const CreatePage = async () => {
   const session = await getAuthSession();
@@ -23,6 +24,7 @@ const CreatePage = async () => {
           will generate a course for you!
         </div>
       </div>
+      <CreateCourseForm />
     </div>
   );
 };
